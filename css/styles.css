@@ -27,8 +27,7 @@ body {
 
 /* Variables Globales */
 .contenedor {
-    max-width: 120rem;
-    width: 95%;
+    width: min(90%,120rem);
     margin: 0 auto;
 }
 
@@ -113,6 +112,10 @@ video {
     }
 }
 
+.barra {
+    padding-top: 4rem;
+}
+
 .logo {
     color: var(--colorBlanco);
 }
@@ -133,19 +136,20 @@ video {
         gap: 2rem;
     }
 }
-.logo,.navegacion__enlace{
-    padding: 1rem;
-}
+
 .navegacion__enlace {
     display: block;
     color: var(--colorBlanco);
     font-size: 1.8rem;
     text-align: center;
+    padding: 1rem;
 }
-.navegacion__enlace:hover{
+
+.navegacion__enlace:hover {
     background-color: #ff0000;
     border-radius: 5px;
 }
+
 /* MAIN */
 @media (min-width: 768px) {
     .contenido-principal {
@@ -206,34 +210,21 @@ video {
 }
 
 .widget--juego__info {
-    font-weight:normal ;
+    font-weight: normal;
 }
-.widget--juego__label,.widget--juego__info{
+
+.widget--juego__label,
+.widget--juego__info {
     font-size: 2rem;
 }
 
 /* Footer */
-.footer{
+.footer {
     background-color: var(--colorNegro);
-    padding: 1rem;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
 }
 
-.social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    color: var(--colorBlanco);
-}
-.logo__nombre--footer{
-    font-size: 2.5rem;
-}
-@media (min-width: 768px){
-    .social{
-        display: flex;
-        justify-content: flex-end;
-    }
-    .enlaces{
-        padding: 0 5rem;
-    }
+.footer .navegacion__enlace:nth-child(n):hover {
+    background: none;
 }
