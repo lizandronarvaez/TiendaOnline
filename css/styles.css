@@ -192,8 +192,11 @@ video {
 
 .boton--secundario {
     background-color: #ff0000;
+    transition: .5s;
 }
-
+.boton--secundario:hover{
+    box-shadow: 0 0 15px 3px #ff0000;
+}
 .widget--juego {
     border-bottom: 1px solid var(--colorBorde);
     margin-bottom: 2rem;
