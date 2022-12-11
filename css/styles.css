@@ -1,0 +1,239 @@
+:root {
+    /* Fuentes */
+    --fuentePrincipal: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    /* Colores */
+    --colorBlanco: #ffffff;
+    --colorNegro: #000000;
+    --colorBorde: #e1e1e1;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
++:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+/* Variables Globales */
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.8rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+video {
+    max-width: 100%;
+}
+
+/* Utilidades */
+.no--margin {
+    margin: 0;
+}
+
+.no--padding {
+    padding: 0;
+}
+
+.centrar--texto {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/mando.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 60rem;
+}
+
+.header__texto {
+    color: var(--colorBlanco);
+    margin-top: 5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 20rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    color: var(--colorBlanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+/* BARRA NAVEGACION */
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.logo,.navegacion__enlace{
+    padding: 1rem;
+}
+.navegacion__enlace {
+    display: block;
+    color: var(--colorBlanco);
+    font-size: 1.8rem;
+    text-align: center;
+}
+.navegacion__enlace:hover{
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+/* MAIN */
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--colorBorde);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    color: var(--colorBlanco);
+    display: block;
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+.boton--principal {
+    background-color: var(--colorNegro);
+}
+
+.boton--secundario {
+    background-color: #ff0000;
+}
+
+.widget--juego {
+    border-bottom: 1px solid var(--colorBorde);
+    margin-bottom: 2rem;
+}
+
+.widget--juego:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.widget--juego__label {
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+.widget--juego__info {
+    font-weight:normal ;
+}
+.widget--juego__label,.widget--juego__info{
+    font-size: 2rem;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--colorNegro);
+    padding: 1rem;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--colorBlanco);
+}
+.logo__nombre--footer{
+    font-size: 2.5rem;
+}
+@media (min-width: 768px){
+    .social{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .enlaces{
+        padding: 0 5rem;
+    }
+}
