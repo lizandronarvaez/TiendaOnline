@@ -239,6 +239,11 @@ video {
     padding-bottom: 3rem;
 }
 
+.footer .barra,
+.footer .navegacion {
+    display: flex;
+}
+
 .footer .navegacion__enlace:nth-child(n):hover {
     background: none;
 }
