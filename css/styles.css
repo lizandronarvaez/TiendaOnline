@@ -99,10 +99,22 @@ video {
     text-align: center;
 }
 
+.header__texto--titulo {
+    font-size: 2.6rem;
+}
+
 @media (min-width: 768px) {
     .header__texto {
         margin-top: 20rem;
     }
+
+    .header__texto--titulo {
+        font-size: 4rem;
+    }
+}
+
+.barra {
+    padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -110,10 +122,6 @@ video {
         display: flex;
         justify-content: space-between;
     }
-}
-
-.barra {
-    padding-top: 4rem;
 }
 
 .logo {
@@ -171,6 +179,7 @@ video {
 
 .boton {
     color: var(--colorBlanco);
+    border: none;
     display: block;
     font-family: var(--fuentePrincipal);
     font-weight: 700;
@@ -184,6 +193,10 @@ video {
     .boton {
         display: inline-block;
     }
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--principal {
@@ -260,10 +273,12 @@ video {
         align-items: flex-end;
         text-align: left;
     }
-    .videojuegos__imagen{
+
+    .videojuegos__imagen {
         display: flex;
     }
-    .juegos--disponibles{
+
+    .juegos--disponibles {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 4rem;
@@ -276,22 +291,24 @@ video {
     border-bottom: 1px solid var(--colorBorde);
     text-align: center;
 }
-.videojuegos .boton{
+
+.videojuegos .boton {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@media (min-width: 768px){
-    .videojuegos .boton{
+
+@media (min-width: 768px) {
+    .videojuegos .boton {
         align-items: center;
         margin: 0;
-        cursor: pointer;
     }
 }
 
-.videojuegos .boton--secundario:hover{
+.videojuegos .boton--secundario:hover {
     box-shadow: none;
 }
+
 .juego__label {
     font-family: var(--fuentePrincipal);
     font-weight: bold;
@@ -304,4 +321,47 @@ video {
 .juego__label,
 .juego__info {
     font-size: 2rem;
+}
+
+/* CONTACTO.HTML */
+
+.contacto-background {
+    background-image: url(../images/contacto.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.formulario {
+    background-color: var(--colorBlanco);
+    margin: -5rem auto 0 auto;
+    padding: 2rem;
+    width: 80%;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        width: 90%;
+    }
+}
+
+.campos {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 8rem;
+    text-align: center;
+}
+
+.campo__field {
+    border: 1px solid var(--colorBorde);
+    flex: 1;
+    padding: .5rem;
+}
+
+.campo__field--textarea {
+    height: 20rem;
+    padding: 1rem;
 }
